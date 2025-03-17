@@ -2,23 +2,110 @@
 .atm {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   height: 100%;
 
   .atm-header {
     display: flex;
     place-items: center;
+    justify-content: center;
     margin-top: 96px;
-    padding: 16px 64px;
+    padding: 28px 64px;
     background-color: #126cae;
     border-radius: 16px;
+    min-height: calc(300 - (28px * 2));
+    width: calc(854px - (64px * 2));
+
+    img {
+      object-fit: fill;
+      height: 240px;
+    }
   }
+
   .atm-body {
     height: 100%;
     display: flex;
-    place-items: center;
-    margin: 0 24px;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 50px;
     background-color: white;
-    border-top: 10px solid #bebebe;
+    border-top: 20px solid #bebebe;
+
+    .atm-cards {
+      display: flex;
+      justify-content: center;
+      place-items: center;
+      height: 70px;
+      gap: 20px;
+      transform: scale(1.75);
+
+      > * {
+        height: 36px;
+        object-fit: fill;
+      }
+    }
+
+    .atm-interface {
+      display: flex;
+      flex-direction: row;
+
+      .atm-screen {
+        border: #e1e1d6 solid 10px;
+        background-color: #7eb4d5;
+        width: 474px;
+        height: 446px;
+      }
+
+      .atm-left {
+        margin-left: 26px;
+        display: flex;
+        flex-direction: row;
+      }
+      .atm-right {
+        margin-right: 26px;
+        display: flex;
+        flex-direction: row;
+      }
+      .atm-center {
+        position: relative;
+      }
+
+      .atm-buttons-dash {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: calc(20px + (50px / 2) - 2px);
+        padding-bottom: 50px;
+
+        .atm-dash {
+          width: 28px;
+          height: 8px;
+          border-bottom: #9b9b9b solid 8px;
+        }
+      }
+
+      .atm-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 34px;
+        gap: 20px;
+
+        button {
+          width: 76px;
+          height: 40px;
+          margin: 0;
+          border-top: #d9d9d4 solid 4px;
+          border-bottom: #9b9b9b solid 4px;
+          background-color: #c1c1c1;
+        }
+      }
+      .systemsLogo {
+        position: absolute;
+        right: 4%;
+        bottom: -4%;
+        transform: scale(1.75);
+      }
+    }
   }
 }
