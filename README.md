@@ -2,6 +2,16 @@
 
 Interview assignment for Thomson Reuters
 
+## Valid PINs for testing are as follows
+- 1111
+- 2222
+- 3333
+- 4444
+- 5555
+- 6666
+
+Each PIN activates a different card type
+
 ## GitHub Pages
 
 This project is being hosted on this repos [GitHub Pages](https://xanir.github.io/thomson-reuters-interview-assignment/)
