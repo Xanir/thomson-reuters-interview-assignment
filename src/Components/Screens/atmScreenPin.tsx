@@ -3,6 +3,7 @@ import './atmScreens.css'
 
 import {
   default as store,
+  CardType as CardType,
 } from '../../Store/appState.ts'
 
 function ATMScreenPin() {
@@ -18,7 +19,7 @@ function ATMScreenPin() {
       top: null,
       topMiddle: null,
       bottomMiddle: null,
-      bottom: () => {store.setScreen('MENU')},
+      bottom: () => {store.setScreen('MENU'); store.setCardType(CardType.STAR)},
     },
   })
 

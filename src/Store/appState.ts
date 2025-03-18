@@ -32,11 +32,12 @@ class AppStore {
       balance: observable,
       screen: observable,
       screenElem: computed,
+      cardType: observable,
       setScreen: action,
       setButtons: action,
+      setCardType: action,
       deposit: action,
       withdrawl: action,
-      cardType: observable,
     });
   }
   cardType: CardTypeV = null;
@@ -54,6 +55,10 @@ class AppStore {
 
   setButtons(buttons: ATMButtons) {
     this.buttons = buttons;
+  }
+
+  setCardType(cardType: CardTypeV) {
+    this.cardType = cardType;
   }
 
   deposit(val: number) {

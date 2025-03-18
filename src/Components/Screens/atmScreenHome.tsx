@@ -7,6 +7,7 @@ import {
 
 function ATMScreenHome() {
 
+  store.setCardType(null)
   store.setButtons({
     left: {
       top: null,
