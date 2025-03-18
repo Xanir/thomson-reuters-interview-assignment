@@ -5,7 +5,6 @@ import './atmScreens.css'
 
 import {
   default as store,
-  ATMButtons as ATMButtons,
 } from '../../Store/appState.ts'
 
 function ATMScreenBalance() {

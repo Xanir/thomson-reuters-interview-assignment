@@ -1,4 +1,4 @@
-import { EventHandler, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 import ATMActionLabel from '../atmActionLabel.tsx'
 import './atmScreens.css'
@@ -12,10 +12,10 @@ function ATMScreenPin() {
   const [pinValue, setPinValue] = useState<number>();
   const [isPinInvalid, setPinInvalid] = useState<boolean>(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     const numericValue = value.replace(/[^0-9]/g, '');
-    setPinValue(numericValue);
+    setPinValue(+numericValue);
   };
 
   store.setButtons({

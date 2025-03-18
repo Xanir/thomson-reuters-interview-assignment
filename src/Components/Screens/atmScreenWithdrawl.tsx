@@ -4,7 +4,6 @@ import './atmScreens.css'
 import './atmScreens.css'
 import {
   default as store,
-  ATMButtons as ATMButtons,
 } from '../../Store/appState.ts'
 
 function ATMScreenWithdrawl() {
