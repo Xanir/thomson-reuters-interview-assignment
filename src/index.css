@@ -1,4 +1,7 @@
 :root {
+  display: flex;
+  flex-direction: column;
+
   line-height: 1.5;
   font-weight: 400;
 
@@ -25,6 +28,7 @@ a:hover {
 }
 
 body {
+  flex: 1;
   margin: 0;
   display: flex;
   background-color: #9f80ac;
