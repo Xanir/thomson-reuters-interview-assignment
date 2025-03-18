@@ -1,9 +1,9 @@
 import { makeObservable, observable, action, computed } from 'mobx';
 import {
+  ButtonActions as ButtonActions,
   Screens as Screens,
   ScreenType as ScreenType
 } from '../Components/Screens/Screens.ts'
-
 
 export interface ATMButtonsGroup {
   top: Function | null,
@@ -43,14 +43,16 @@ class AppStore {
   cardType: CardTypeV = null;
   balance: number = 10;
   screen: ScreenType = 'HOME';
-  buttons: ATMButtons | null = null;
+  buttons: ATMButtons = ButtonActions['HOME'];
 
   get screenElem() {
     return Screens[this.screen]
   }
 
   setScreen(screen: ScreenType) {
+    if (screen === 'HOME') {this.setCardType(null)}
     this.screen = screen;
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtons(buttons: ATMButtons) {

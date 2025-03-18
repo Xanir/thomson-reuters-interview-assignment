@@ -3,25 +3,26 @@ import './atmScreens.css'
 
 import {
   default as store,
+  ATMButtons as ATMButtons,
   CardType as CardType,
 } from '../../Store/appState.ts'
 
-function ATMScreenPin() {
+export const ButtonActions: ATMButtons = {
+  left: {
+    top: null,
+    topMiddle: null,
+    bottomMiddle: null,
+    bottom: null,
+  },
+  right: {
+    top: null,
+    topMiddle: null,
+    bottomMiddle: null,
+    bottom: () => {store.setScreen('MENU'); store.setCardType(CardType.STAR)},
+  },
+}
 
-  store.setButtons({
-    left: {
-      top: null,
-      topMiddle: null,
-      bottomMiddle: null,
-      bottom: null,
-    },
-    right: {
-      top: null,
-      topMiddle: null,
-      bottomMiddle: null,
-      bottom: () => {store.setScreen('MENU'); store.setCardType(CardType.STAR)},
-    },
-  })
+function ATMScreenPin() {
 
   return (
     <>

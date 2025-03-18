@@ -5,24 +5,25 @@ import './atmScreens.css'
 
 import {
   default as store,
+  ATMButtons as ATMButtons,
 } from '../../Store/appState.ts'
 
-function ATMScreenBalance() {
+export const ButtonActions: ATMButtons = {
+  left: {
+    top: null,
+    topMiddle: null,
+    bottomMiddle: null,
+    bottom: null,
+  },
+  right: {
+    top: () => {store.setScreen('DEPOSIT')},
+    topMiddle: () => {store.setScreen('WITHDRAWL')},
+    bottomMiddle: null,
+    bottom: () => {store.setScreen('MENU')},
+  },
+}
 
-  store.setButtons({
-    left: {
-      top: null,
-      topMiddle: null,
-      bottomMiddle: null,
-      bottom: null,
-    },
-    right: {
-      top: () => {store.setScreen('DEPOSIT')},
-      topMiddle: () => {store.setScreen('WITHDRAWL')},
-      bottomMiddle: null,
-      bottom: () => {store.setScreen('MENU')},
-    },
-  })
+function ATMScreenBalance() {
 
   return (
     <>

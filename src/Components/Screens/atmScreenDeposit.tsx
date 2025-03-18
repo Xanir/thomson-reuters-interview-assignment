@@ -3,25 +3,25 @@ import './atmScreens.css'
 
 import {
   default as store,
+  ATMButtons as ATMButtons,
 } from '../../Store/appState.ts'
 
+export const ButtonActions: ATMButtons = {
+  left: {
+    top: () => {store.deposit(10);store.setScreen('MENU')},
+    topMiddle: () => {store.deposit(20);store.setScreen('MENU')},
+    bottomMiddle: () => {store.deposit(50);store.setScreen('MENU')},
+    bottom: () => {store.deposit(100);store.setScreen('MENU')},
+  },
+  right: {
+    top: null,
+    topMiddle: null,
+    bottomMiddle: null,
+    bottom: () => {store.setScreen('MENU')},
+  },
+}
+
 function ATMScreenDeposit() {
-
-  store.setButtons({
-    left: {
-      top: () => {store.deposit(10);store.setScreen('MENU')},
-      topMiddle: () => {store.deposit(20);store.setScreen('MENU')},
-      bottomMiddle: () => {store.deposit(50);store.setScreen('MENU')},
-      bottom: () => {store.deposit(100);store.setScreen('MENU')},
-    },
-    right: {
-      top: null,
-      topMiddle: null,
-      bottomMiddle: null,
-      bottom: () => {store.setScreen('MENU')},
-    },
-  })
-
   return (
     <>
       <span>Deposit</span>
