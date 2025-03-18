@@ -1,10 +1,17 @@
 
+@font-face {
+  font-family: "BlockBlueprint";
+  src: url("/BlockBlueprint.ttf") format("truetype");
+}
+
 .atm {
+  font-family: "BlockBlueprint";
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
+  font-size: 55px;
 
   .atm-header {
     position: relative;
