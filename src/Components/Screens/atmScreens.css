@@ -1,0 +1,36 @@
+.atm-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex: 1;
+  align-items: flex-end;
+  padding-bottom: 25px;
+
+  .atm-actions-left {
+    justify-self: flex-start;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    > * {
+      height: 42px;
+    }
+  }
+
+  .atm-actions-right {
+    justify-self: flex-end;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+
+    > * {
+      height: 42px;
+    }
+  }
+
+}

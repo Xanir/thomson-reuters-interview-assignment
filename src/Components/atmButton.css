@@ -1,0 +1,23 @@
+.atm-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  button.atm-button {
+    width: 76px;
+    height: 42px;
+    margin: 0;
+    padding: 0;
+    border-top: #d9d9d4 solid 4px;
+    border-bottom: #9b9b9b solid 4px;
+    background-color: #c1c1c1;
+  }
+
+  .atm-dash {
+    width: 28px;
+    height: 8px;
+    margin-bottom: 8px;
+    border-bottom: #9b9b9b solid 8px;
+  }
+}

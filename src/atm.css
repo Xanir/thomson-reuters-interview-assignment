@@ -48,12 +48,15 @@
     .atm-interface {
       display: flex;
       flex-direction: row;
+      padding: 0 26px;
 
       .atm-screen {
         border: #e1e1d6 solid 10px;
         background-color: #7eb4d5;
         width: 474px;
         height: 446px;
+        display: flex;
+        flex-direction: column;
       }
 
       .atm-left {
@@ -70,35 +73,12 @@
         position: relative;
       }
 
-      .atm-buttons-dash {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        gap: calc(20px + (50px / 2) - 2px);
-        padding-bottom: 50px;
-
-        .atm-dash {
-          width: 28px;
-          height: 8px;
-          border-bottom: #9b9b9b solid 8px;
-        }
-      }
-
       .atm-buttons {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         padding-bottom: 34px;
         gap: 20px;
-
-        button {
-          width: 76px;
-          height: 40px;
-          margin: 0;
-          border-top: #d9d9d4 solid 4px;
-          border-bottom: #9b9b9b solid 4px;
-          background-color: #c1c1c1;
-        }
       }
       .systemsLogo {
         position: absolute;

@@ -1,0 +1,18 @@
+.atm-action {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  .atm-action-label {
+    margin: 0;
+    padding: 0 8px;
+  }
+
+  .atm-dash {
+    width: 28px;
+    height: 8px;
+    margin-bottom: 8px;
+    border-bottom: #ffffff solid 8px;
+  }
+}
