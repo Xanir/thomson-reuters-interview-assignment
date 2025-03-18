@@ -21,3 +21,7 @@ To run this project in livew reload mode run
 ```
 npm run dev
 ```
+
+## The Assignment
+
+The requirements of the assignment can be found [here](assignment-details\README.md)
