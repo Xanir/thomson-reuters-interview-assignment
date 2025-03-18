@@ -1,6 +1,5 @@
-import { makeObservable, observable, action, computed } from 'mobx';
+import { makeObservable, observable, action, computed, reaction } from 'mobx';
 import {
-  ButtonActions as ButtonActions,
   Screens as Screens,
   ScreenType as ScreenType
 } from '../Components/Screens/Screens.ts'
@@ -39,11 +38,20 @@ class AppStore {
       deposit: action,
       withdrawl: action,
     });
+    this.loadFromLocalStorage();
+
+    // Automatically save to localStorage whenever the todos array changes
+    reaction(
+        () => this.balance,
+        balance => {
+            localStorage.setItem('balance', JSON.stringify(balance));
+        }
+    );
   }
   cardType: CardTypeV = null;
   balance: number = 10;
   screen: ScreenType = 'HOME';
-  buttons: ATMButtons = ButtonActions['HOME'];
+  buttons: ATMButtons | null = null;
 
   get screenElem() {
     return Screens[this.screen]
@@ -52,7 +60,6 @@ class AppStore {
   setScreen(screen: ScreenType) {
     if (screen === 'HOME') {this.setCardType(null)}
     this.screen = screen;
-    this.setButtons(ButtonActions[screen])
   }
 
   setButtons(buttons: ATMButtons) {
@@ -71,6 +78,12 @@ class AppStore {
     this.balance = this.balance - val;
   }
 
+  loadFromLocalStorage() {
+    const balance = localStorage.getItem('balance');
+    if (balance) {
+        this.balance = JSON.parse(balance);
+    }
+  }
 }
 
 // 5. Create an Instance of the Store

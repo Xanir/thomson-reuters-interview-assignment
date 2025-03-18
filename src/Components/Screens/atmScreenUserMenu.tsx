@@ -6,26 +6,26 @@ import {
   ATMButtons as ATMButtons,
 } from '../../Store/appState.ts'
 
-export const ButtonActions: ATMButtons = {
-  left: {
-    top: null,
-    topMiddle: null,
-    bottomMiddle: () => {store.setScreen('WITHDRAWL')},
-    bottom: () => {store.setScreen('DEPOSIT')},
-  },
-  right: {
-    top: () => null,
-    topMiddle: () => {store.setScreen('HOME')},
-    bottomMiddle: () => {store.setScreen('BALANCE')},
-    bottom: () => {store.setScreen('PIN')},
-  },
-}
-
 function ATMScreenHome() {
+
+  store.setButtons({
+    left: {
+      top: null,
+      topMiddle: null,
+      bottomMiddle: () => {store.setScreen('WITHDRAWL')},
+      bottom: () => {store.setScreen('DEPOSIT')},
+    },
+    right: {
+      top: () => null,
+      topMiddle: () => {store.setScreen('HOME')},
+      bottomMiddle: () => {store.setScreen('BALANCE')},
+      bottom: () => {store.setScreen('PIN')},
+    },
+  })
 
   return (
     <>
-      <span>User Menu</span>
+      <div className="atm-message">Welcome</div>
       <div className="atm-actions">
         <div className="atm-actions-left">
           <div />

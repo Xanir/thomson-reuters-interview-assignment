@@ -1,3 +1,25 @@
+
+.atm-message {
+  margin: 24px 12px 0 12px;
+  text-align: center;
+}
+
+.atm-pin-input {
+  background: white;
+  border: none;
+  font-size: 40px;
+  width: 2em;
+  height: 0.75em;
+  color: black;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.atm-pin-invalid {
+  font-size: 26px;
+  line-height: 1em;
+}
+
 .atm-actions {
   display: flex;
   flex-direction: row;

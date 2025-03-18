@@ -7,26 +7,26 @@ import {
   ATMButtons as ATMButtons,
 } from '../../Store/appState.ts'
 
-export const ButtonActions: ATMButtons = {
-  left: {
-    top: () => {store.withdrawl(10); store.setScreen('MENU')},
-    topMiddle: () => {store.withdrawl(20); store.setScreen('MENU')},
-    bottomMiddle: () => {store.withdrawl(50); store.setScreen('MENU')},
-    bottom: () => {store.withdrawl(100); store.setScreen('MENU')},
-  },
-  right: {
-    top: null,
-    topMiddle: null,
-    bottomMiddle: null,
-    bottom: () => {store.setScreen('MENU')},
-  },
-}
-
 function ATMScreenWithdrawl() {
+
+  store.setButtons({
+    left: {
+      top: () => {store.withdrawl(10); store.setScreen('MENU')},
+      topMiddle: () => {store.withdrawl(20); store.setScreen('MENU')},
+      bottomMiddle: () => {store.withdrawl(50); store.setScreen('MENU')},
+      bottom: () => {store.withdrawl(100); store.setScreen('MENU')},
+    },
+    right: {
+      top: null,
+      topMiddle: null,
+      bottomMiddle: null,
+      bottom: () => {store.setScreen('MENU')},
+    },
+  })
 
   return (
     <>
-      <span>Withdrawl</span>
+      <div className="atm-message">Withdrawl</div>
       <div className="atm-actions">
         <div className="atm-actions-left">
           <ATMActionLabel isLeftSide={true} text="$10"/>
