@@ -3,6 +3,8 @@ import { observer } from 'mobx-react-lite';
 import './atm.css'
 import atmLogo from '/atm_sign.png'
 import atmSystemsLogo from '/systems.png'
+import atmGrifiti from '/graffiti.png'
+import atmGrifitiSticker from '/sticker_graf.png'
 
 import {
   default as store,
@@ -70,7 +72,8 @@ function App() {
   return (
     <div className="atm">
       <div className="atm-header">
-        <img src={atmLogo} alt="ATM logo" />
+        <img className="atm-logo" src={atmLogo} alt="ATM logo" />
+        <img className="atm-grifiti" src={atmGrifiti} alt="grifiti" />
       </div>
       <div className="atm-body">
         <div className="atm-cards">
@@ -100,6 +103,7 @@ function App() {
             <ATMButton onClick={clickRightBottomMiddleButton} isLeftSide={false} />
             <ATMButton onClick={clickRightBottomButton} isLeftSide={false} />
           </div>
+          <img className="atm-grifiti-sticker" src={atmGrifitiSticker} alt="grifiti with sticker" />
         </div>
       </div>
     </div>

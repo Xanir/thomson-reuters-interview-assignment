@@ -1,11 +1,13 @@
 
 .atm {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
 
   .atm-header {
+    position: relative;
     display: flex;
     place-items: center;
     justify-content: center;
@@ -16,7 +18,7 @@
     min-height: calc(300 - (28px * 2));
     width: calc(854px - (64px * 2));
 
-    img {
+    .atm-logo {
       object-fit: fill;
       height: 240px;
     }
@@ -46,6 +48,7 @@
     }
 
     .atm-interface {
+      position: relative;
       display: flex;
       flex-direction: row;
       padding: 0 26px;
@@ -87,5 +90,18 @@
         transform: scale(1.75);
       }
     }
+  }
+
+  .atm-grifiti {
+    position: absolute;
+    top: 34%;
+    right: 18.3%;
+    transform: scale(1.85);
+  }
+  .atm-grifiti-sticker {
+    position: absolute;
+    bottom: -27%;
+    left: 15%;
+    transform: scale(1.9);
   }
 }
