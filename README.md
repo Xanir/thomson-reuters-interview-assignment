@@ -34,4 +34,4 @@ npm run dev
 
 ## The Assignment
 
-The requirements of the assignment can be found [here](assignment-details\README.md)
+The requirements of the assignment can be found [here](assignment-details/README.md)
