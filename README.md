@@ -1,6 +1,6 @@
 # Interview Assignment
 
-Interview assignment fir Thomson Reuters
+Interview assignment for Thomson Reuters
 
 ## GitHub Pages
 
@@ -8,7 +8,7 @@ This project is being hosted on this repos [GitHub Pages](https://xanir.github.i
 
 ## Building
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To build this project locally run
 
 ```
 npm run build
@@ -16,7 +16,8 @@ npm run build
 
 Then locally host the /dist folder
 
-This can also be run in developer mode byu running
+To run this project in livew reload mode run
+
 ```
 npm run dev
 ```
