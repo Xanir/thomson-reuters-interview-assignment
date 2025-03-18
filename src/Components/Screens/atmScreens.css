@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+.atm-message-menu {
+  font-size: 40px;
+}
+
 .atm-pin-input {
   background: white;
   border: none;

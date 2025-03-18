@@ -24,7 +24,10 @@ function ATMScreenHome() {
 
   return (
     <>
-      <div className="atm-message">Welcome</div>
+      <div className="atm-message atm-message-menu">
+        <div>Hi Peter Parker</div>
+        <div>Please make a choice...</div>
+      </div>
       <div className="atm-actions">
         <div className="atm-actions-left">
           <div />
